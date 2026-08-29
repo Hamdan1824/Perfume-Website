@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order — TR Perfume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="/assets/apple-touch-icon.png" rel="icon" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="index.html">
+    <img src="assets/logo.png" alt="TR Perfume logo">
+  </a>
+  <nav class="site-nav">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="order.html">Order</a>
+    <a class="nav-cta" href="tel:+923272932973">Call Us</a>
+  </nav>
+</header>
+
+<section class="order-banner">
+  <div class="bloom bloom-1" style="opacity:0.6;"></div>
+  <div class="section-head">
+    <div class="section-eyebrow">Order</div>
+    <h1 class="section-title display">Complete your order.</h1>
+    <p class="hero-sub" style="margin-top:14px;">Fill in your details below. When you submit, WhatsApp will open with everything pre-filled — just hit send and we'll take it from there.</p>
+  </div>
+</section>
+
+<div class="order-layout">
+  <form id="order-form" novalidate>
+    <div class="field" id="name-field">
+      <label for="name">Full name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Ahmed Raza" autocomplete="name">
+      <div class="error-msg">Please enter your name.</div>
+    </div>
+
+    <div class="field" id="phone-field">
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone" placeholder="03XX XXXXXXX" autocomplete="tel">
+      <div class="error-msg">Please enter a valid phone number.</div>
+    </div>
+
+    <div class="field" id="city-field">
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" placeholder="e.g. Karachi" autocomplete="address-level2">
+      <div class="error-msg">Please enter your city.</div>
+    </div>
+
+    <div class="field" id="address-field">
+      <label for="address">Delivery address</label>
+      <textarea id="address" name="address" placeholder="House / street, area, landmark" autocomplete="street-address"></textarea>
+      <div class="error-msg">Please enter your delivery address.</div>
+    </div>
+
+    <div class="field">
+      <label for="quantity">Quantity</label>
+      <div class="qty-row">
+        <button type="button" class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+        <span class="qty-value" id="qty-value">1</span>
+        <button type="button" class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" max="20" style="display:none;">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="notes">Notes <span style="opacity:0.6;">(optional)</span></label>
+      <textarea id="notes" name="notes" placeholder="Preferred delivery time, gift wrapping, etc."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submit-btn" style="width:100%; justify-content:center;">
+      Send Order via WhatsApp
+    </button>
+
+    <div class="form-status" id="form-status"></div>
+  </form>
+
+  <aside class="summary-card">
+    <div class="summary-title">Order Summary</div>
+    <div class="product-shot small">
+      <img src="assets/summary-bottle.png" alt="TR Perfume Bold Era bottle">
+    </div>
+    <div class="summary-row">
+      <span>Bold Era (unit price)</span>
+      <span>Rs. 1,799</span>
+    </div>
+    <div class="summary-row">
+      <span>Quantity</span>
+      <span id="summary-qty">1</span>
+    </div>
+    <div class="summary-row total">
+      <span>Total</span>
+      <span id="summary-total">Rs. 1,799</span>
+    </div>
+    <p class="summary-note">Cash on delivery available. You'll confirm the final total with us on WhatsApp before it ships.</p>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-tag">TR Perfume — elegance in every spray.</div>
+  <div class="footer-mark">TR PERFUME</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
